@@ -69,6 +69,7 @@ void GodotBody3D::_update_local_inertia() {
 		principal_inertia = inertia;
 	}
 	_inv_inertia = principal_inertia.inverse();
+	inv_inertia_tensor_local = inertia_tensor_local.inverse();
 }
 
 void GodotBody3D::_update_transform_dependent() {
